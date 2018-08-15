@@ -122,3 +122,8 @@ paths:
     </tr>
   </tbody>
 </table>
+
+### Dynamic sub-path
+You can use the placeholder `{subpath}` in your `repo` or `display` in
+order to create a dynamic subdirectory. I.E map `example.com/group/<any-project-name>` to `github.com/example/group-<any-project-name>`
+

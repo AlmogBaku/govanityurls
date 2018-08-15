@@ -115,8 +115,8 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}{
 		Import:  h.Host(r) + pc.path,
 		Subpath: subpath,
-		Repo:    pc.repo,
-		Display: pc.display,
+		Repo:    strings.Replace(pc.repo, "{subpath}", subpath, -1),
+		Display: strings.Replace(pc.display, "{subpath}", subpath, -1),
 		VCS:     pc.vcs,
 	}); err != nil {
 		http.Error(w, "cannot render the page", http.StatusInternalServerError)
