@@ -8,4 +8,5 @@ paths:
     repo: https://github.com/rakyll/launchpad
 
   /opencensus/:
-    repo: https://github.com/rakyll/opencensus-{subpath}
+    wildcard: true
+    repo: https://github.com/rakyll/opencensus-*
